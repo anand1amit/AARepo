@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0035)http://localhost:55959/xml_etl.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Pydoc: module xml_etl</title>
+
+<link rel="stylesheet" type="text/css" href="./Pydoc_xml_etl_files/_pydoc.css"></head><body bgcolor="#f0f0f8">
+            <div style="float:left">
+                Python 3.10.4 [tags/v3.10.4:9d38120, MSC v.1929 64 bit (AMD64)]<br>Windows-10
+            </div>
+            <div style="float:right">
+                <div style="text-align:center">
+                  <a href="http://localhost:55959/index.html">Module Index</a>
+                  : <a href="http://localhost:55959/topics.html">Topics</a>
+                  : <a href="http://localhost:55959/keywords.html">Keywords</a>
+                </div>
+                <div>
+                    <form action="http://localhost:55959/get" style="display:inline;">
+                      <input type="text" name="key" size="15">
+                      <input type="submit" value="Get">
+                    </form>&nbsp;
+                    <form action="http://localhost:55959/search" style="display:inline;">
+                      <input type="text" name="key" size="15">
+                      <input type="submit" value="Search">
+                    </form>
+                </div>
+            </div>
+            <div style="clear:both;padding-top:.5em;">
+<table width="100%" cellspacing="0" cellpadding="2" border="0" summary="heading">
+<tbody><tr bgcolor="#7799ee">
+<td valign="bottom">&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>xml_etl</strong></big></big></font></td><td align="right" valign="bottom"><font color="#ffffff" face="helvetica, arial"><a href="http://localhost:55959/">index</a><br><a href="file://c:%5Cusers%5Cde321jl%5Conedrive%20-%20ey%5Cdocuments%5Cdata%20engineering%20course%5Cexercises%5Cxml_etl.py/">c:\users\de321jl\onedrive - ey\documents\data engineering course\exercises\xml_etl.py</a></font></td></tr></tbody></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing="0" cellpadding="2" border="0" summary="section">
+<tbody><tr bgcolor="#aa55cc">
+<td colspan="3" valign="bottom">&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tbody><tr><td width="25%" valign="top"><a href="http://localhost:55959/boto3.html">boto3</a><br>
+<a href="http://localhost:55959/logging.html">logging</a><br>
+<a href="http://localhost:55959/os.html">os</a><br>
+</td><td width="25%" valign="top"><a href="http://localhost:55959/pathlib.html">pathlib</a><br>
+<a href="http://localhost:55959/pandas.html">pandas</a><br>
+<a href="http://localhost:55959/requests.html">requests</a><br>
+</td><td width="25%" valign="top"><a href="http://localhost:55959/urllib3.html">urllib3</a><br>
+<a href="http://localhost:55959/xmltodict.html">xmltodict</a><br>
+<a href="http://localhost:55959/zipfile.html">zipfile</a><br>
+</td><td width="25%" valign="top"></td></tr></tbody></table></td></tr></tbody></table></p><p>
+<table width="100%" cellspacing="0" cellpadding="2" border="0" summary="section">
+<tbody><tr bgcolor="#eeaa77">
+<td colspan="3" valign="bottom">&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-download_initial_xml"><strong>download_initial_xml</strong></a>()</dt><dd><tt>This&nbsp;function&nbsp;downloads&nbsp;the&nbsp;XML&nbsp;file&nbsp;from&nbsp;the&nbsp;link&nbsp;provided&nbsp;by&nbsp;the&nbsp;requirements&nbsp;document</tt></dd></dl>
+ <dl><dt><a name="-flatten_xml"><strong>flatten_xml</strong></a>()</dt><dd><tt>This&nbsp;function&nbsp;reads&nbsp;the&nbsp;XML&nbsp;data&nbsp;file,&nbsp;converts&nbsp;it&nbsp;to&nbsp;a&nbsp;dictionary&nbsp;and&nbsp;then&nbsp;iterates&nbsp;over&nbsp;the&nbsp;required<br>
+values&nbsp;and&nbsp;keys.&nbsp;It&nbsp;then&nbsp;appends&nbsp;this&nbsp;data&nbsp;to&nbsp;a&nbsp;list&nbsp;of&nbsp;rows&nbsp;if&nbsp;there&nbsp;is&nbsp;a&nbsp;match&nbsp;in&nbsp;the&nbsp;key.&nbsp;If&nbsp;a&nbsp;row&nbsp;does&nbsp;not<br>
+match,&nbsp;it&nbsp;will&nbsp;be&nbsp;appended&nbsp;to&nbsp;a&nbsp;separate&nbsp;list&nbsp;which&nbsp;will&nbsp;be&nbsp;converted&nbsp;to&nbsp;a&nbsp;CSV&nbsp;acting&nbsp;as&nbsp;an&nbsp;error&nbsp;log.<br>
+&nbsp;<br>
+Once&nbsp;fully&nbsp;iterated&nbsp;over,&nbsp;the&nbsp;lists&nbsp;will&nbsp;be&nbsp;converted&nbsp;to&nbsp;Dataframes,&nbsp;then&nbsp;to&nbsp;CSVs&nbsp;and&nbsp;then&nbsp;uploaded&nbsp;to&nbsp;S3&nbsp;bucket.</tt></dd></dl>
+ <dl><dt><a name="-parse_xml"><strong>parse_xml</strong></a>()</dt><dd><tt>This&nbsp;function&nbsp;reads&nbsp;the&nbsp;XML&nbsp;file&nbsp;containing&nbsp;the&nbsp;download&nbsp;link&nbsp;to&nbsp;the&nbsp;data&nbsp;file&nbsp;and&nbsp;then&nbsp;converts&nbsp;to&nbsp;a&nbsp;json<br>
+to&nbsp;retrieve&nbsp;the&nbsp;download&nbsp;link</tt></dd></dl>
+ <dl><dt><a name="-read_file"><strong>read_file</strong></a>(fileName)</dt><dd><tt>A&nbsp;function&nbsp;to&nbsp;read&nbsp;an&nbsp;XML&nbsp;file&nbsp;and&nbsp;then&nbsp;convert&nbsp;to&nbsp;a&nbsp;dictionary&nbsp;to&nbsp;make&nbsp;parsing&nbsp;easier</tt></dd></dl>
+ <dl><dt><a name="-retrieve_xml"><strong>retrieve_xml</strong></a>(url)</dt><dd><tt>A&nbsp;function&nbsp;to&nbsp;download&nbsp;and&nbsp;extract&nbsp;the&nbsp;zip&nbsp;file&nbsp;from&nbsp;the&nbsp;download&nbsp;link</tt></dd></dl>
+ <dl><dt><a name="-upload_to_s3_bucket"><strong>upload_to_s3_bucket</strong></a>(filename)</dt><dd><tt>A&nbsp;function&nbsp;to&nbsp;upload&nbsp;the&nbsp;CSVs&nbsp;to&nbsp;the&nbsp;CSVs&nbsp;folder&nbsp;in&nbsp;the&nbsp;steeleyeassessment&nbsp;S3&nbsp;bucket</tt></dd></dl>
+</td></tr></tbody></table></p><p>
+<table width="100%" cellspacing="0" cellpadding="2" border="0" summary="section">
+<tbody><tr bgcolor="#55aa55">
+<td colspan="3" valign="bottom">&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>__warningregistry__</strong> = {'version': 22}<br>
+<strong>bucketName</strong> = 'steeleyeassessment'<br>
+<strong>date</strong> = '20220419'<br>
+<strong>s3_client</strong> = &lt;botocore.client.S3 object&gt;</td></tr></tbody></table></p></div>
+</body></html>
