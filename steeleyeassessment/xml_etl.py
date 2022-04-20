@@ -48,7 +48,6 @@ def read_file(fileName):
 
 
 def parse_xml():
-
     """This function reads the XML file containing the download link to the data file and then converts to a json
     to retrieve the download link"""
 
