@@ -61,8 +61,6 @@ def parse_xml():
         if string['@name'] == "download_link":
             downloadLink = string['#text']
             retrieve_xml(downloadLink)
-        else:
-            logging.error('Download link not found')
 
 
 def retrieve_xml(url):
